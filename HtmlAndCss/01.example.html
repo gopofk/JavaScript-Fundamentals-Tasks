@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Button</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .neon-button {
+      background: transparent;
+      color: #0ff;
+      border: 2px solid #0ff;
+      padding: 20px 40px;
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    }
+
+    .neon-button:hover {
+      background: #0ff;
+      color: #000;
+      box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="neon-button" onclick="playSound()">Click Me</button>
+
+  <audio id="click-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+  <script>
+    function playSound() {
+      document.getElementById('click-sound').play();
+      alert('You clicked the neon button!');
+    }
+  </script>
+
+</body>
+</html>
